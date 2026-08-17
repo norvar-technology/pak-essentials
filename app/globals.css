@@ -1,0 +1,90 @@
+/**
+ * app/globals.css
+ * ---------------------------------------------------------------------------
+ * Tailwind's three layers, plus the light/dark theme variables every color
+ * token in tailwind.config.js reads from (`bg`, `surface`, `surfacealt`,
+ * `ink`, `muted`, `line`). Values are written as space-separated R G B
+ * triples (no `rgb()` wrapper) because that's what Tailwind's
+ * `rgb(var(--x) / <alpha-value>)` pattern expects — it lets classes like
+ * `bg-surface/60` apply opacity correctly.
+ *
+ * :root      = light theme (default)
+ * .dark      = dark theme, active whenever <html> has the "dark" class
+ *              (toggled by components/ThemeToggle.js via ThemeContext)
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+
+  --c-bg: 253 252 250;        /* was: 247 245 240 */
+  --c-surface: 255 255 255;   /* unchanged */
+  --c-surface-alt: 247 240 227; /* was: 234 220 198 */
+  --c-ink: 31 31 31;          /* unchanged */
+  --c-muted: 104 100 93;      /* was: 96 92 86 */
+  --c-line: 31 31 31;         /* unchanged */
+}
+
+.dark {
+  color-scheme: dark;
+
+  --c-bg: 19 18 16;
+  --c-surface: 28 26 23;
+  --c-surface-alt: 42 37 30;
+  --c-ink: 244 241 234;
+  --c-muted: 176 171 160;
+  --c-line: 255 255 255;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--c-bg));
+  color: rgb(var(--c-ink));
+  font-feature-settings: 'ss01' on, 'ss02' on;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  overflow-x: hidden; /* add this line */
+}
+
+/* Brand-coloured text selection, a tiny detail that reinforces "premium". */
+::selection {
+  background-color: rgb(var(--c-surface-alt));
+  color: rgb(var(--c-ink));
+}
+
+/* Visible, on-brand keyboard focus ring (accessibility requirement — never
+   remove focus outlines without replacing them). */
+:focus-visible {
+  outline: 2px solid #b99657;
+  outline-offset: 2px;
+}
+
+/* Thin, gold-tinted scrollbar for the horizontal product rails & cart drawer. */
+.slim-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.slim-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(185, 150, 87, 0.4);
+  border-radius: 999px;
+}
+.slim-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Respect users who've asked for reduced motion at the OS level. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
