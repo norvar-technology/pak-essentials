@@ -9,6 +9,7 @@ import ProductJsonLd from '@/components/ProductJsonLd';
 import AddToCartPanel from '@/components/AddToCartPanel';
 import ProductGrid from '@/components/ProductGrid';
 import Link from 'next/link';
+import ShareButton from '@/components/ShareButton';
 
 /**
  * app/products/[slug]/page.js
@@ -127,6 +128,10 @@ export default function ProductPage({ params }) {
           )}
 
           <AddToCartPanel product={product} />
+
+          <div className="mt-4">
+            <ShareButton title={product.name} text={product.shortDescription} />
+          </div>
 
           <p className="text-xs text-ink/40 mt-4">
             100% authentic, sourced directly from {product.brand}. Delivered across Nigeria.

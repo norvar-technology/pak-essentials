@@ -1,7 +1,14 @@
 import Link from 'next/link';
 import { categories } from '@/data/categories';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import Logo from './Logo';
 
+
+// Developer credit link — opens a WhatsApp chat with the site's developer.
+const DEVELOPER_WHATSAPP_URL = buildWhatsAppUrl(
+  '2349039048518',
+  "Hi, I found your work through the Pak Essentials site — I'd like to learn more about your services."
+);
 /**
  * components/Footer.js
  * ---------------------------------------------------------------------------
@@ -65,9 +72,20 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-line/10">
-        <div className="max-w-content mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted">
+        <div className="max-w-content mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row flex-wrap items-center justify-center md:justify-between gap-3 md:gap-4 text-xs text-muted text-center md:text-left">
           <p>© {year} Pak Essentials. All rights reserved.</p>
           <p>Payments secured by Paystack · Bank transfer only</p>
+          <p>
+            Built by{' '}
+            
+            <a href={DEVELOPER_WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold-dark underline underline-offset-2"
+            >
+              Norvar Technology Ltd
+            </a>
+          </p>
         </div>
       </div>
     </footer>
