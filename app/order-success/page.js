@@ -18,7 +18,7 @@
  *   4. On failure: shows a clear error and a way to retry / contact support.
  */
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import RingBadge from '@/components/RingBadge';
@@ -56,11 +56,22 @@ function OrderSuccessContent() {
   const [whatsAppUrl, setWhatsAppUrl] = useState(null);
   const [countdown, setCountdown] = useState(4);
 
+  // Guards the verify-and-clear side effect so it only ever truly runs once
+  // per mount. React 18 Strict Mode intentionally double-invokes effects in
+  // dev (and fast remounts can do the same in prod). Without this guard, a
+  // second run reads PENDING_ORDER_KEY *after* the first run already
+  // deleted it — silently rebuilding the order with no items/customer and
+  // overwriting the correct WhatsApp URL that was already in state. That
+  // was the cause of the "items missing from the WhatsApp message" bug.
+  const hasVerifiedRef = useRef(false);
+
   useEffect(() => {
     if (!reference) {
       setStatus('failed');
       return;
     }
+    if (hasVerifiedRef.current) return;
+    hasVerifiedRef.current = true;
 
     async function verify() {
       try {
@@ -75,9 +86,29 @@ function OrderSuccessContent() {
         setReceiptUrl(data.receiptUrl || null);
 
         // Rebuild the order summary from what checkout saved just before
-        // opening the Paystack popup.
-        const savedRaw = window.localStorage.getItem(PENDING_ORDER_KEY);
-        const saved = savedRaw ? JSON.parse(savedRaw) : null;
+        // opening the Paystack popup. This read is wrapped separately from
+        // the verification call above: a corrupted or missing localStorage
+        // entry should never turn a *confirmed, successful* payment into a
+        // "we couldn't confirm this payment" screen for the customer — at
+        // worst it should just mean a thinner WhatsApp message.
+        let saved = null;
+        try {
+          const savedRaw = window.localStorage.getItem(PENDING_ORDER_KEY);
+          saved = savedRaw ? JSON.parse(savedRaw) : null;
+        } catch (parseErr) {
+          console.error('Could not parse pending order from localStorage:', parseErr);
+        }
+
+        if (!saved?.items?.length) {
+          // Loud on purpose: this is exactly the condition that silently
+          // produced a WhatsApp message with no line items before. If this
+          // fires again, check the console for `reference` and dig into
+          // why PENDING_ORDER_KEY was empty at this point.
+          console.warn(
+            'No pending order found in localStorage — WhatsApp message will be missing item details',
+            { reference }
+          );
+        }
 
         const order = {
           items: saved?.items || [],
@@ -91,7 +122,9 @@ function OrderSuccessContent() {
         setStatus('success');
 
         // Clear the pending-order snapshot now that it's been used, so it
-        // doesn't leak into a future, unrelated order.
+        // doesn't leak into a future, unrelated order. Safe to do
+        // unconditionally now that hasVerifiedRef guarantees this function
+        // body only ever runs once.
         window.localStorage.removeItem(PENDING_ORDER_KEY);
       } catch (err) {
         console.error('Payment verification failed:', err);
@@ -111,6 +144,9 @@ function OrderSuccessContent() {
       window.location.href = whatsAppUrl;
       return;
     }
+    // 1000ms = 1 real second per tick, matching what "{countdown}s" tells
+    // the customer. (Was previously 30000ms, making the on-screen "4s"
+    // actually take 2 minutes.)
     const timer = setTimeout(() => setCountdown((c) => c - 1), 1000);
     return () => clearTimeout(timer);
   }, [status, whatsAppUrl, countdown]);
