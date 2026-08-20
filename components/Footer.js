@@ -74,7 +74,7 @@ export default function Footer() {
       <div className="border-t border-line/10">
         <div className="max-w-content mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row flex-wrap items-center justify-center md:justify-between gap-3 md:gap-4 text-xs text-muted text-center md:text-left">
           <p>© {year} Pak Essentials. All rights reserved.</p>
-          <p>Payments secured by Paystack · Bank transfer only</p>
+          <p>Payments secured by Paystack .</p>
           <p>
             Built by{' '}
             

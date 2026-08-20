@@ -86,7 +86,6 @@ export default function CheckoutPage() {
       amount: nairaToKobo(subtotal),
       currency: 'NGN',
       ref: reference,
-      channels: ['bank_transfer'],
       metadata: {
         custom_fields: [
           { display_name: 'Customer Name', variable_name: 'customer_name', value: form.name },
@@ -192,8 +191,7 @@ export default function CheckoutPage() {
               {submitting ? 'Opening secure payment…' : `Pay ${formatNaira(subtotal)} via bank transfer`}
             </button>
             <p className="text-xs text-ink/40">
-              Payment is processed securely by Paystack. Only bank transfer is accepted — you&apos;ll see your
-              unique transfer details in the popup that opens.
+              Payment is processed securely by Paystack.
             </p>
           </form>
 

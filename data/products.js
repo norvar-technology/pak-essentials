@@ -41,8 +41,8 @@ export const products = [
     name: 'Collagen Cranberry Beverage Powder Supplements',
     brand: 'Cong Sheng Tang',
     category: 'supplements-wellness',
-    price: 19500,
-    compareAtPrice: 23000,
+    price: 16500,
+    compareAtPrice: 20000,
     size: '180g',
     shortDescription: 'Collagen and cranberry drink for firm, radiant skin.',
     description:
@@ -61,7 +61,7 @@ export const products = [
     name: 'Wellwoman Original Supplement',
     brand: 'Vitabiotics',
     category: 'supplements-wellness',
-    price: 16800,
+    price: 10000,
     size: '30 capsules',
     shortDescription: 'Daily micronutrient supplement with evening primrose and starflower oils for women\'s health and vitality.',
     description:
@@ -79,7 +79,7 @@ export const products = [
     name: 'Dynewell Plus Herbal Syrup Supplement',
     brand: 'Dynewell',
     category: 'supplements-wellness',
-    price: 16800,
+    price: 6000,
     size: '1 bottle',
     shortDescription: 'Natural African and Asian herbal extract syrup for weight management and body shaping.',
     description:
@@ -93,11 +93,11 @@ export const products = [
   },
   {
     id: 'p004',
-    slug: 'omega-radiance-fish-oil',
+    slug: 'reload-womens-formula',
     name: "Reload! Women's Formula",
     brand: 'Reload!',
     category: 'supplements-wellness',
-    price: 15900,
+    price: 15000,
     size: '30 Tablets',
     shortDescription: 'Once-daily multivitamin, multimineral, and antioxidant dietary supplement for women.',
     description:
@@ -115,7 +115,7 @@ export const products = [
     name: 'Daravit Woman',
     brand: 'Elbe',
     category: 'supplements-wellness',
-    price: 21500,
+    price: 10000,
     size: '37 softgels',
     shortDescription: 'Combipack multivitamin with chasteberry, biotin, and evening primrose oil for women.',
     description:
@@ -133,7 +133,7 @@ export const products = [
     name: 'Wins Town Gluta Glow Sparkle Powder',
     brand: 'Wins Town',
     category: 'supplements-wellness',
-    price: 12800,
+    price: 16000,
     size: '1 tub',
     shortDescription: 'Glutathione and collagen powder to lighten dark spots and brighten skin.',
     description:
@@ -153,7 +153,7 @@ export const products = [
     name: 'Prolab Body Oil',
     brand: 'Prolab',
     category: 'body-oils',
-    price: 16500,
+    price: 14000,
     size: '250ml',
     shortDescription: 'A fast-absorbing dry oil that leaves a healthy, non-greasy glow.',
     description:
@@ -172,7 +172,7 @@ export const products = [
     name: 'Dr Davey Body Oil',
     brand: 'Dr Davey',
     category: 'body-oils',
-    price: 11900,
+    price: 7000,
     size: '200ml',
     shortDescription: 'A soothing blend for an at-home massage or unwind-before-bed ritual.',
     description:
@@ -190,7 +190,7 @@ export const products = [
     name: 'Skin Therapy Body Oil',
     brand: 'Palmer\'s',
     category: 'body-oils',
-    price: 10200,
+    price: 19500,
     size: '150ml',
     shortDescription: 'A lightweight coconut oil spray for soft, subtly glowing skin.',
     description:
@@ -208,7 +208,7 @@ export const products = [
     name: 'Disaar Body Oil',
     brand: 'Disaar Beauty Skincare',
     category: 'body-oils',
-    price: 17800,
+    price: 3700,
     size: '100ml',
     shortDescription: 'A restorative oil that targets stretch marks, scars and uneven texture.',
     description:
@@ -244,7 +244,7 @@ export const products = [
     name: 'Disaar Cocoa Body Oil Gel',
     brand: 'Disaar Beauty Skincare',
     category: 'body-oils',
-    price: 13500,
+    price: 8500,
     size: '200ml',
     shortDescription: 'A fine-shimmer dry oil for an event-ready, luminous finish.',
     description:
@@ -264,7 +264,7 @@ export const products = [
     name: 'Good Molecules Face Toner',
     brand: 'Good Molecules',
     category: 'face-toners',
-    price: 8500,
+    price: 18000,
     size: '200ml',
     shortDescription: 'Alcohol-free toner that soothes and preps skin for serum.',
     description:
@@ -283,7 +283,7 @@ export const products = [
     name: 'Revox Salicyclic Face Toner',
     brand: 'Revox',
     category: 'face-toners',
-    price: 11200,
+    price: 18000,
     size: '250ml',
     shortDescription: 'A gentle AHA toner that resurfaces skin for an even, radiant tone.',
     description:
@@ -301,7 +301,7 @@ export const products = [
     name: 'Revox Glycolic Face Toner',
     brand: 'Revox',
     category: 'face-toners',
-    price: 7900,
+    price: 18000,
     size: '250ml',
     shortDescription: 'A pore-tightening toner for oily and combination skin.',
     description:
@@ -319,7 +319,7 @@ export const products = [
     name: 'Anua 70 Face Toner',
     brand: 'Anua',
     category: 'face-toners',
-    price: 8900,
+    price: 29000,
     size: '250ml',
     shortDescription: 'A refreshing facial mist for an instant mid-day hydration boost.',
     description:
@@ -337,7 +337,7 @@ export const products = [
     name: 'Simple Face Toner',
     brand: 'Simple',
     category: 'face-toners',
-    price: 9600,
+    price: 9000,
     size: '200ml',
     shortDescription: 'An antioxidant-rich toner to help defend skin from daily stressors.',
     description:
@@ -355,7 +355,7 @@ export const products = [
     name: 'Skin By Zaron Face Toner',
     brand: 'Skin By Zaron',
     category: 'face-toners',
-    price: 12800,
+    price: 15000,
     size: '300ml',
     shortDescription: 'The gentlest chemical exfoliant, ideal for sensitive or beginner skin.',
     description:
@@ -375,7 +375,7 @@ export const products = [
     name: 'Niu Skin Glowing Body Wash',
     brand: 'Niu Skin',
     category: 'body-washes',
-    price: 8900,
+    price: 10500,
     size: '800ml',
     shortDescription: 'A rich, creamy cleanser that lathers gently and leaves skin soft.',
     description:
@@ -394,7 +394,7 @@ export const products = [
     name: 'SK Retinol Rose Body Wash',
     brand: 'SK Dutchess Glow',
     category: 'body-washes',
-    price: 7900,
+    price: 15000,
     size: '1000ml',
     shortDescription: 'An energising citrus wash with a light clarifying edge.',
     description:
@@ -412,7 +412,7 @@ export const products = [
     name: 'Gluta White Body Wash',
     brand: 'Glutawhite Costmetics',
     category: 'body-washes',
-    price: 9200,
+    price: 15000,
     size: '1000ml',
     shortDescription: 'A fragrance-light wash formulated for sensitive, easily irritated skin.',
     description:
@@ -430,7 +430,7 @@ export const products = [
     name: 'Dove Body Wash',
     brand: 'Dove',
     category: 'body-washes',
-    price: 8400,
+    price: 12000,
     size: '500ml',
     shortDescription: 'A warm, gourmand-scented wash that leaves skin soft and lightly perfumed.',
     description:
@@ -466,7 +466,7 @@ export const products = [
     name: 'Body Butter Body Wash',
     brand: 'Clini-Tone',
     category: 'body-washes',
-    price: 8600,
+    price: 13000,
     size: '1000ml',
     shortDescription: 'A calming lavender wash, ideal for a relaxing evening shower.',
     description:
@@ -486,7 +486,7 @@ export const products = [
     name: 'Skeenpoint Face Cream',
     brand: 'Skeenpoint',
     category: 'face-creams',
-    price: 14500,
+    price: 14000,
     size: '50ml',
     shortDescription: 'A whipped, non-greasy day cream built on ultra-nourishing shea butter.',
     description:
@@ -505,7 +505,7 @@ export const products = [
     name: 'Facefacts Bright And Clear Face Cream',
     brand: 'Facefacts',
     category: 'face-creams',
-    price: 17800,
+    price: 14000,
     size: '75ml',
     shortDescription: 'A richer night formula that works while you sleep to restore and replenish.',
     description:
@@ -523,7 +523,7 @@ export const products = [
     name: 'Cosmo Vitamin C Face Cream',
     brand: 'Cosmo Glow Natural',
     category: 'face-creams',
-    price: 12900,
+    price: 13000,
     size: '50ml',
     shortDescription: 'A lightweight, oil-free gel for oily and combination skin.',
     description:
@@ -541,7 +541,7 @@ export const products = [
     name: 'A.M Glow Face Cream',
     brand: 'A.M Glow',
     category: 'face-creams',
-    price: 16400,
+    price: 15000,
     size: '50ml',
     shortDescription: 'A rich, restorative cream for compromised or reactive skin barriers.',
     description:
@@ -559,7 +559,7 @@ export const products = [
     name: 'Flawless White Face Cream',
     brand: 'Flawless White',
     category: 'face-creams',
-    price: 15600,
+    price: 23000,
     size: '50ml',
     shortDescription: 'A daily moisturizer with vitamin C for an even, radiant complexion.',
     description:
@@ -577,7 +577,7 @@ export const products = [
     name: 'Estelin Face Cream',
     brand: 'Estelin Skincare',
     category: 'face-creams',
-    price: 13200,
+    price: 9500,
     size: '200g',
     shortDescription: 'A calming, fragrance-light cream for reactive and sensitive skin.',
     description:
@@ -597,7 +597,7 @@ export const products = [
     name: 'Neocell Super Collagen + Vitamin C Body Lotion',
     brand: 'Neocell',
     category: 'body-lotion',
-    price: 10500,
+    price: 14000,
     size: '400ml',
     shortDescription: 'A thick, fast-absorbing lotion for all-day soft skin.',
     description:
@@ -616,7 +616,7 @@ export const products = [
     name: 'Cloud 9 Lemon + Mango Extracts Body Lotion',
     brand: 'Cloud 9',
     category: 'body-lotion',
-    price: 12800,
+    price: 18800,
     size: '500ml',
     shortDescription: 'Niacinamide-infused lotion for an even, radiant-looking body glow.',
     description:
@@ -634,7 +634,7 @@ export const products = [
     name: 'Palmers Cocoa Butter Body Lotion',
     brand: 'Palmers',
     category: 'body-lotion',
-    price: 9800,
+    price: 15000,
     size: '270g',
     shortDescription: 'A classic, everyday lotion for soft, nourished skin.',
     description:
@@ -648,11 +648,11 @@ export const products = [
   },
   {
     id: 'p034',
-    slug: 'firming-body-lotion',
+    slug: 'nadinola-secret-lightening-body-lotion',
     name: 'Nadinola Secret(Glutathione and Vitamin C) lightening body lotion',
     brand: 'Nadinola',
     category: 'body-lotion',
-    price: 14900,
+    price: 13000,
     size: '300ml',
     shortDescription: 'A caffeine-infused lotion that helps skin look firmer and more toned.',
     description:
@@ -670,7 +670,7 @@ export const products = [
     name: 'Body Butter Body Lotion',
     brand: 'Clini-Tone',
     category: 'body-lotion',
-    price: 9200,
+    price: 12000,
     size: '100ml',
     shortDescription: 'A tropical-scented lotion that leaves skin soft with a subtle sheen.',
     description:
@@ -688,7 +688,7 @@ export const products = [
     name: 'Cerave body lotion',
     brand: "L'Oreal",
     category: 'body-lotion',
-    price: 10900,
+    price: 28000,
     size: '473ml',
     shortDescription: 'A fragrance-free lotion formulated for sensitive skin and daily use.',
     description:
