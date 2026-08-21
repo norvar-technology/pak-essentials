@@ -129,11 +129,11 @@ export const products = [
   },
   {
     id: 'p006',
-    slug: 'winstown-gluta-glow-sparkle-powder',
-    name: 'Wins Town Gluta Glow Sparkle Powder',
-    brand: 'Wins Town',
+    slug: 'winsjown-gluta-glow-sparkle-powder',
+    name: 'Wins Jown Gluta Glow Sparkle Powder',
+    brand: 'Wins Jown',
     category: 'supplements-wellness',
-    price: 16000,
+    price: 19500,
     size: '1 tub',
     shortDescription: 'Glutathione and collagen powder to lighten dark spots and brighten skin.',
     description:
@@ -226,7 +226,7 @@ export const products = [
     name: 'Vaselin Body Oil',
     brand: 'Vaselin',
     category: 'body-oils',
-    price: 9800,
+    price: 14000,
     size: '200ml',
     shortDescription: 'A brightly scented oil that turns any shower into a morning reset.',
     description:
@@ -448,7 +448,7 @@ export const products = [
     name: 'Cosmo Glow White Body Wash',
     brand: 'Bark & Bloom',
     category: 'body-washes',
-    price: 8100,
+    price: 13000,
     size: '400ml',
     shortDescription: 'An activated charcoal wash for body breakouts and back acne.',
     description:
