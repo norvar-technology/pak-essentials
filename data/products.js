@@ -1155,7 +1155,7 @@ export const products = [
     slug: 'eos-cashmere-body-wash-vanilla-cashmere',
     name: 'eos Cashmere Body Wash - Vanilla Cashmere',
     brand: 'eos',
-    category: 'body-wash',
+    category: 'body-washes',
     price: 30000,
     size: '473ml',
     shortDescription: 'Rich, pH-balanced creamy body wash that gently cleanses while locking in moisture.',
