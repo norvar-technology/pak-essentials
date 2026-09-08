@@ -51,6 +51,7 @@ const nextConfig = {
         hostname: r2Domain || 'images.pakessentials.com',
       },
     ],
+    unoptimized: true, // Cloudflare R2 is already a CDN, so Next.js doesn't need to optimise images
   },
 
   // Nice, clean URLs: /products/rose-glow-serum instead of
